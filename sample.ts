@@ -23,5 +23,5 @@ userResource.defineAction({ name: "Unsuspend User" });
 userResource.defineAction({ name: "Approve User KYC" });
 
 // List resources from store
-const result = elysius.getResourceActions();
+const result = elysius.search("UserExc.UpdateUser");
 console.log(result);

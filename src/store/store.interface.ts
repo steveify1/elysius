@@ -13,4 +13,5 @@ export interface Store {
   updateResourceAction(resourceId: string, action: ResourceAction): void;
   getResources(): StoreResource[] | Promise<StoreResource[]>;
   getResourceActions(): ResourceAction[] | Promise<ResourceAction[]>;
+  search(query: string): StoreResource | ResourceAction | null;
 }

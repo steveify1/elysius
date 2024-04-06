@@ -21,4 +21,8 @@ export class Elysius {
   getResourceActions() {
     return this.store.getResourceActions();
   }
+
+  search(query: string) {
+    return this.store.search(query);
+  }
 }

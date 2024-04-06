@@ -37,4 +37,24 @@ export class LocalStore implements Store {
 
     return actions;
   }
+
+  /**
+   * Queries the store for a resource or a resource action associated with the current control definition.
+   *
+   * @param query - A resource/action query that takes the pattern: "resourceId.resourceActionId".
+   * The resource action Id is optional.
+   */
+  search(query: string): StoreResource | ResourceAction | null {
+    if (!query) return null;
+
+    const [resourceId, resourceActionId] = query.split(".");
+
+    const resource = this.resources[resourceId];
+
+    if (!resource) return null;
+
+    if (!resourceActionId) return resource;
+
+    return resource.actions[resourceActionId] || null;
+  }
 }
