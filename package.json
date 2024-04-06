@@ -1,0 +1,24 @@
+{
+  "name": "elysius",
+  "version": "1.0.0",
+  "description": "A Permission GateKeeping API",
+  "main": "index.ts",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [
+    "authorization",
+    "permission-management",
+    "role-management",
+    "policy"
+  ],
+  "author": "Stephen Nwakasi",
+  "license": "ISC",
+  "dependencies": {
+    "@types/jest": "^29.5.12",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.1.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.4"
+  }
+}
