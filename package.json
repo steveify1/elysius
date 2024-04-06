@@ -4,7 +4,8 @@
   "description": "A Permission GateKeeping API",
   "main": "index.ts",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "sample": "ts-node sample.ts"
   },
   "keywords": [
     "authorization",
