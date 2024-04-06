@@ -8,6 +8,6 @@ export class Control {
   }
 
   private async initializeStore() {
-    await this.store.initialize();
+    await this.store.initialize(this.id);
   }
 }
