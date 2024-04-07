@@ -1,4 +1,6 @@
+import { Store } from "../store";
+
 export interface ControlOptions {
   /** A StorageMechanism instance */
-  store: any;
+  store: Store;
 }

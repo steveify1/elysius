@@ -1,1 +1,1 @@
-export { ActionDefinition } from "./ActionDefinition";
+export * from "./ActionDefinition";

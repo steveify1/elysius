@@ -1,7 +1,10 @@
-import { Elysius } from "./src";
-import { ActionDefinition } from "./src/decorators";
-import { Resource } from "./src/resource";
-import { ElysiusStore } from "./src/store";
+import {
+  ActionDefinition,
+  Elysius,
+  ElysiusStore,
+  Resource,
+  ResourceAction,
+} from "../src";
 
 const store = new ElysiusStore.LocalStore();
 const controlId = Date.now().toString();
@@ -25,13 +28,13 @@ userResource.defineAction({ name: "Approve User KYC" });
 
 class UserController {
   @ActionDefinition(userResource, { name: "SearchUserList" })
-  searchUserList(body: any) {
+  searchUserList(body: ResourceAction) {
     console.log(body);
   }
 }
 
 const userController = new UserController();
-userController.searchUserList("timeless is the name of the album");
+userController.searchUserList({ name: "timeless is the name of the album" });
 // List resources from store
 const result = store.search("User.SearchUserList");
 console.log(result);

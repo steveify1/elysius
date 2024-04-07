@@ -1,6 +1,13 @@
 {
   "compilerOptions": {
     "esModuleInterop": true,
-    "experimentalDecorators": true
-  }
+    "experimentalDecorators": true,
+    "noImplicitAny": true,
+    "declaration": true,
+    "noEmit": true,
+    "isolatedModules": true,
+    "outDir": "dist",
+    "moduleResolution": "Node"
+  },
+  "exclude": ["node_modules"]
 }
